@@ -6,7 +6,7 @@ class MovieDetails extends Component {
   render() {
     return (
       <div>
-        <ul>  
+        <ul>
           <li>Primary info</li>
           <li>Alternative titles</li>
           <li>Cast</li>
