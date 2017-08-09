@@ -4,7 +4,11 @@
   border: 1px solid lightgray;
   color: gray;
   flex: 1;
+<<<<<<< HEAD
   padding: 4px 0px;
+=======
+  padding: 4px 0;
+>>>>>>> 27f11a83d0ea4340e800703fc49d0737181eb951
 }
 
 .navLink:hover {
@@ -19,7 +23,6 @@
 }
 
 #dropDownLinks {
-  position: ;
   display: none;
   width: 100%;
   animation: menuload .5s;
