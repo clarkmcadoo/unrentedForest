@@ -17,8 +17,8 @@ const reducer = (state = initalState, action) => {
       newState.movies = action.payload;
       console.log("GET_NOW_PLAYING action returned:", newState.movies);
       return newState.movies;
-      default:
-      return state
+    default:
+      return state;
   }
 };
 
