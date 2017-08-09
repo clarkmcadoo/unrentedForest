@@ -1,3 +1,13 @@
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 body {
   max-width: 1024px;
   margin: auto;
@@ -11,15 +21,29 @@ body {
 }
 
 #headerLogo {
-  display: inline-block;
   margin: 0;
-  margin-left: 5%;
-  padding: 15%;
+<<<<<<< HEAD
+  padding: 15px;
+=======
+  padding: 10px;
+>>>>>>> 27f11a83d0ea4340e800703fc49d0737181eb951
   border-right: 1px solid white;
 }
 
 #searchBar {
-  display: inline-block;
   margin-left: 10%;
-  
 }
+
+<<<<<<< HEAD
+@media (min-width: 1024px){
+  #headerLogo {
+    padding: 30px;
+  }
+}
+=======
+@media (min-width: 1024px) {
+  #headerLogo {
+    padding: 30px;
+  }
+}
+>>>>>>> 27f11a83d0ea4340e800703fc49d0737181eb951
