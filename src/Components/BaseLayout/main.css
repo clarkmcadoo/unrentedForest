@@ -30,7 +30,7 @@ body {
   margin-left: 10%;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px){
   #headerLogo {
     padding: 30px;
   }

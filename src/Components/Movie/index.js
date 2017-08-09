@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './main.css';
 import {connect} from 'react-redux';
-import {playingNow} from '../../actions';
+import {playingNowMovies} from '../../actions';
 import {bindActionCreators} from 'redux';
 
 // need to get the field names from backend and also figure out the subheader variable name from store
 class Movie extends Component {
     componentWillMount(){
-        this.props.playingNow()
+        this.props.playingNowMovies()
     }
     render() {
         //maybe w150 also
@@ -38,7 +38,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch) =>{
-    return bindActionCreators({playingNow:playingNow}, dispatch);
+    return bindActionCreators({playingNowMovies:playingNowMovies}, dispatch);
 }
 
 
