@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './main.css';
+import NavBar from './NavBar';
+
 const BaseLayout = (props) => {
   
     return (
@@ -10,6 +12,7 @@ const BaseLayout = (props) => {
           </div>
           <div id="searchBar">SEARCH BAR</div>
         </div>
+        <NavBar/>
       </div>
     );
   }
