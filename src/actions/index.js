@@ -1,7 +1,7 @@
 import { store } from "../store";
 
-const GET_MOVIE = "GET_MOVIE";
-const GET_NOW_PLAYING = "GET_NOW_PLAYING";
+export const GET_MOVIE = "GET_MOVIE";
+export const GET_NOW_PLAYING = "GET_NOW_PLAYING";
 
 //example request: https://api.themoviedb.org/3/movie/550?api_key=756d51b27574d082bdec5ff892e27bbe
 const BASE_URL = "https://api.themoviedb.org/3/movie/?";
