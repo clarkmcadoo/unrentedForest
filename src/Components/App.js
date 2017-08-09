@@ -11,8 +11,8 @@ class App extends Component {
     return (
       <div className="App">
         <BaseLayout>
-        <Movie/>
-        <Details/>
+          <Movie/>
+          <Details/>
         </BaseLayout>
       </div>
     );
