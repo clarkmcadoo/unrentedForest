@@ -1,0 +1,25 @@
+body {
+  max-width: 1024px;
+  margin: auto;
+}
+
+#headerWrapper {
+  background-color: red;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+#headerLogo {
+  display: inline-block;
+  margin: 0;
+  margin-left: 5%;
+  padding: 15%;
+  border-right: 1px solid white;
+}
+
+#searchBar {
+  display: inline-block;
+  margin-left: 10%;
+  
+}
