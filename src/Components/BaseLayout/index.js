@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import { connect } from "react-redux";
 import SearchBar from "./SearchBar";
 import { movieGetter } from "../../actions";
+import { bindActionCreators } from "redux";
 
 const BaseLayout = props => {
   return (
@@ -19,8 +20,11 @@ const BaseLayout = props => {
   );
 };
 
-const mapDispatchToProps = () => {
-  handleSubmit: movieGetter;
-};
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    handleSubmit: movieGetter
+  });
+  dispatch;
+}
 
 export default connect(mapDispatchToProps)(BaseLayout);
