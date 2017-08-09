@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import BaseLayout from './BaseLayout';
-import Details from './details';
+import Details from './Details';
 import Movie from './Movie';
 
 
