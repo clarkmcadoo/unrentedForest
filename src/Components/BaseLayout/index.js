@@ -4,19 +4,8 @@ import NavBar from "./NavBar";
 import { connect } from "react-redux";
 import SearchBar from "./SearchBar";
 import { movieGetter } from "../../actions";
+import { bindActionCreators } from "redux";
 
-<<<<<<< HEAD
-const BaseLayout = (props) => {
-  
-    return (
-      <div id="baseLayoutWrapper">
-        <div id="headerWrapper">
-          <h1 id="headerLogo">U.F.</h1>
-          <div id="searchBar">SEARCH BAR</div>
-        </div>
-        <NavBar/>
-        {props.children}
-=======
 const BaseLayout = props => {
   return (
     <div id="baseLayoutWrapper">
@@ -24,7 +13,6 @@ const BaseLayout = props => {
         <h1 id="headerLogo">U.F.</h1>
 
         <SearchBar handleSubmit={props.handleSubmit} />
->>>>>>> 27f11a83d0ea4340e800703fc49d0737181eb951
       </div>
       <NavBar />
       {props.children}
@@ -32,8 +20,11 @@ const BaseLayout = props => {
   );
 };
 
-const mapDispatchToProps = () => {
-  handleSubmit: movieGetter;
-};
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    handleSubmit: movieGetter
+  });
+  dispatch;
+}
 
 export default connect(mapDispatchToProps)(BaseLayout);
