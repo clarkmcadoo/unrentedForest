@@ -22,9 +22,7 @@
 
 * Allow user to search for movie with query string:
 
-  * “You provide a query string and we provide the closest match. Searching by text takes into account all original, translated, alternative names and 
-
-  * Titles.”
+  * You provide a query string and we provide the closest match. Searching by text takes into account all original, translated, alternative names and Titles.
 
 * Allow user to get & view details to include:
 
