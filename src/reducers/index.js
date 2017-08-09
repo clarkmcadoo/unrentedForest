@@ -1,4 +1,3 @@
-import { movieGetter, playingNow } from "../actions";
 import { combineReducers } from "redux";
 import _ from "lodash";
 import {GET_MOVIE} from "../actions";
@@ -16,19 +15,19 @@ const reducer = (state = initialState, action) => {
     case GET_MOVIE:
       newState.movies = action.payload;
       console.log("GET_MOVIE action returned:", newState.movies);
-      return newState.movies;
+      return newState;
     case GET_NOW_PLAYING:
       newState.movies = action.payload;
       console.log("GET_NOW_PLAYING action returned:", newState.movies);
       newState.subheader = "NOW PLAYING";
-      return newState.movies;
+      return newState;
     default:
       return state;
   }
 };
 
 const rootReducer = combineReducers({
-  movies: reducer
+  titles: reducer
 });
 
 export default rootReducer;

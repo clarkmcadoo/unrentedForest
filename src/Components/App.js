@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import BaseLayout from './BaseLayout';
-import Details from './Details';
+import Details from './details';
 import Movie from './Movie';
 
 
