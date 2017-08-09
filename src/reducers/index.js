@@ -21,3 +21,9 @@ const reducer = (state = initalState, action) => {
       return state
   }
 };
+
+const rootReducer = combineReducers({
+  movies: reducer
+});
+
+export default rootReducer;
