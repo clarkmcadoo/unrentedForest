@@ -1,6 +1,9 @@
 import { movieGetter, getNowPlaying } from "../actions";
 import { combineReducers } from "redux";
 import _ from "lodash";
+import {GET_MOVIE} from "../actions";
+import {GET_NOW_PLAYING} from "../actions";
+
 
 const initalState = {
   movies: []
