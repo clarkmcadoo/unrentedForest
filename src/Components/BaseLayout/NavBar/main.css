@@ -1,0 +1,88 @@
+.navLink {
+  text-decoration: none;
+  font-weight: 100;
+  border: 1px solid lightgray;
+  color: gray;
+  flex: 1;
+}
+
+.navLink:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+#navWrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+#dropDownLinks {
+  position: ;
+  display: none;
+  width: 100%;
+  animation: menuload .5s;
+}
+
+#navWrapper:hover #dropDownLinks {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+#dropDownButton {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#navArrow {
+  margin: 0;
+  padding: 0;
+}
+
+#arrowWrap {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border-top: 1px solid white;
+  z-index: 1;
+}
+
+#arrow {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 15px solid red;
+  padding-bottom: 10px;
+}
+
+#arrow:hover {
+  cursor: pointer;
+}
+
+@keyframes menuload {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navLink {
+    padding: 10px;
+  }
+
+  #arrow {
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-top: 25px solid red;
+  }
+}
