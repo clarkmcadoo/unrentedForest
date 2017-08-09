@@ -22,7 +22,7 @@
 #dropDownLinks {
   display: none;
   width: 100%;
-  animation: menuload .5s ease-out;
+  animation: menuload .3s ease-out;
 }
 
 #navWrapper:hover {
@@ -39,6 +39,7 @@
   flex-flow: row nowrap;
   justify-content: space-around;
   position: absolute;
+  z-index: 1;
 }
 
 #dropDownButton {
