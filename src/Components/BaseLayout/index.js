@@ -13,6 +13,7 @@ const BaseLayout = (props) => {
           <div id="searchBar">SEARCH BAR</div>
         </div>
         <NavBar/>
+        {props.children}
       </div>
     );
   }

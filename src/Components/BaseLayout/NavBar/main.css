@@ -8,19 +8,20 @@
 
 .navLink:hover {
   cursor: pointer;
+  background-color: lightgray;
 }
 
 #navWrapper {
   position: relative;
   margin: 0;
   padding: 0;
-
 }
 
 #dropDownLinks {
-  position: absolute;
+  position: ;
   display: none;
-   width: 100%; 
+  width: 100%;
+  animation: menuload .5s;
 }
 
 #navWrapper:hover #dropDownLinks {
@@ -34,16 +35,54 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  padding: 5px 0;
-  border-bottom: 1px solid green;
-  margin: 0 10px;
+  position: relative;
+}
+
+#navArrow {
+  margin: 0;
+  padding: 0;
+}
+
+#arrowWrap {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border-top: 1px solid white;
+  z-index: 1;
 }
 
 #arrow {
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #333;
-  opacity: .3;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 15px solid red;
+  padding-bottom: 10px;
+}
+
+#arrow:hover {
+  cursor: pointer;
+}
+
+@keyframes menuload {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navLink {
+    padding: 10px;
+  }
+
+  #arrow {
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-top: 25px solid red;
+  }
 }
