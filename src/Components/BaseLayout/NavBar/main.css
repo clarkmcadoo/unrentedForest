@@ -28,6 +28,8 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+  position: absolute;
+  z-index: 2;
 }
 
 #dropDownButton {

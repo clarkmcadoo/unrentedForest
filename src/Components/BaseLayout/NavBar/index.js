@@ -1,6 +1,6 @@
 import React from 'react';
 import './main.css';
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const NavBar = (props) => {
@@ -9,9 +9,9 @@ const NavBar = (props) => {
       <div id="navWrapper">
         <div id="dropDownLinks">
           <a href="/" className="navLink">Home</a>
-          <a href="/upcoming" className="navLink">Upcoming</a>
-          <a href="/popular" className="navLink">Popular</a>
-          <a href="/top-rated" className="navLink">Top Rated</a>
+          <a href="/" className="navLink">Upcoming</a>
+          <a href="/" className="navLink">Popular</a>
+          <a href="/" className="navLink">Top Rated</a>
         </div>
         <div id="dropDownButton"><div id="arrowWrap">
           <div id="arrow"></div>
