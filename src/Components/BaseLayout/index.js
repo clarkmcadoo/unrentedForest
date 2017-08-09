@@ -7,9 +7,7 @@ const BaseLayout = (props) => {
     return (
       <div id="baseLayoutWrapper">
         <div id="headerWrapper">
-          <div id="logoWrapper">
-            <h1 id="headerLogo">U.F.</h1>
-          </div>
+          <h1 id="headerLogo">U.F.</h1>
           <div id="searchBar">SEARCH BAR</div>
         </div>
         <NavBar/>

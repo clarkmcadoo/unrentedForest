@@ -4,6 +4,7 @@
   border: 1px solid lightgray;
   color: gray;
   flex: 1;
+  padding: 4px 0px;
 }
 
 .navLink:hover {

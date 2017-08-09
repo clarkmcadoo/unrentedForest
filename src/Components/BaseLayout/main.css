@@ -11,15 +11,17 @@ body {
 }
 
 #headerLogo {
-  display: inline-block;
   margin: 0;
-  margin-left: 5%;
-  padding: 15%;
+  padding: 15px;
   border-right: 1px solid white;
 }
 
 #searchBar {
-  display: inline-block;
   margin-left: 10%;
-  
+}
+
+@media (min-width: 1024px){
+  #headerLogo {
+    padding: 30px;
+  }
 }
