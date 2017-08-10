@@ -4,15 +4,23 @@
 
 #### Front End Web Development Team that contributed to this project:
 
-[Jordan Gregory](https://github.com/jordangregory)
-[Julián Herrera](https://github.com/vidjuheffex)
-[Alandryia Jones](https://github.com/LandiJ)
-[John Love](https://github.com/JohnHLove)
-[Clark McAdoo](https://github.com/clarkmcadoo)
-[Zach Morse](https://github.com/zachmorse)
-[Rick Murdock](https://github.com/rickmurdock)
-[Justin Snyder](https://github.com/Kaizan08)
-[Keegan Thompson](https://github.com/keeganthomp)
+* [Jordan Gregory](https://github.com/jordangregory)
+
+* [Julián Herrera](https://github.com/vidjuheffex)
+
+* [Alandryia Jones](https://github.com/LandiJ)
+
+* [John Love](https://github.com/JohnHLove)
+
+* [Clark McAdoo](https://github.com/clarkmcadoo)
+
+* [Zach Morse](https://github.com/zachmorse)
+
+* [Rick Murdock](https://github.com/rickmurdock)
+
+* [Justin Snyder](https://github.com/Kaizan08)
+
+* [Keegan Thompson](https://github.com/keeganthomp)
 
 ---
 
