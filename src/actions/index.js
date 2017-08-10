@@ -3,7 +3,7 @@
 //example request: https://api.themoviedb.org/3/movie/550?api_key=756d51b27574d082bdec5ff892e27bbe
 // const BASE_URL = "https://api.themoviedb.org/3/movie/?";
 
-// const API_KEY = "&api_key=756d51b27574d082bdec5ff892e27bbe";
+const API_KEY = "&api_key=756d51b27574d082bdec5ff892e27bbe";
 
 //Direct API calls///
 // const URL = {
