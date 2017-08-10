@@ -22,16 +22,16 @@ body {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  padding: 10px 0;
+  box-sizing: border-box;
 }
 
 #headerLogo {
   margin: 0;
-  padding: 15px;
+  padding: 25px;
   border-right: 1px solid white;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
   #headerLogo {
     padding: 20px;
   }
