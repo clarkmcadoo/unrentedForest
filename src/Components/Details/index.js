@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import './main.css';
+// import './main.css';
 
 class MovieDetails extends Component {
   render() {
