@@ -1,24 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import './main.css';
+import DetailList from './DetailList';
+import DetailValues from './DetailValues';
 
 class MovieDetails extends Component {
   render() {
     return (
-      <div>
-        <ul>
-          <li>Primary info</li>
-          <li>Alternative titles</li>
-          <li>Cast</li>
-          <li>Crew</li>
-          <li>Images</li>
-          <li>Plot keywords</li>
-          <li>Release information</li>
-          <li>Trailers</li>
-          <li>Translations</li>
-          <li>Similar movies</li>
-          <li>Reviews</li>
-        </ul>
+      <div className="outer selected">
+        <div className="detail-wrapper inner">
+          <DetailList />
+          <DetailValues />
+        </div>
       </div>
     );
   }

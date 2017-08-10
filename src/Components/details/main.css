@@ -1,5 +1,66 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+.detail-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  
+  justify-content: space-between;
+  /*border: 7px dotted blue;*/
 }
+
+.list-wrapper {
+  list-style: none;
+  text-align: left;
+  flex: 1;
+  padding-right: 30px;
+}
+
+.list-item {
+  padding: 5px;
+  font-size: 1.2em;
+}
+
+.list-item:hover {
+  color: red;
+}
+
+.detail-wrapper {
+  list-style: none;
+  text-align: left;
+}
+
+.value-wrapper {
+  flex: 4;
+  /*flex-basis: auto;*/
+}
+
+.outer {
+  position: absolute;
+  
+  /*left: 100px;
+  top: 50px;
+  width: 100px;
+  height: 100px;
+  */
+  background-image: url(http://matthewjamestaylor.com/blog/selection.gif);
+  
+  border: 1px solid;
+}
+
+.selected {
+  /*border: 0px;*/
+  border: 3px dotted yellow;
+}
+
+.inner {
+  /*position:absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;*/
+
+  background-color: #9CF;
+}
+
+.selected .inner {
+  margin: 1px;
+}
+
