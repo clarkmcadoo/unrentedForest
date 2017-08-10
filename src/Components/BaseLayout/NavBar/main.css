@@ -1,5 +1,7 @@
 .navLink {
   text-decoration: none;
+  background-color: white;
+  font-size: 1em;
   font-weight: 100;
   border: 1px solid lightgray;
   color: gray;
@@ -7,9 +9,17 @@
   padding: 4px 0;
 }
 
+.navLink:focus {
+  outline: none;
+}
+
 .navLink:hover {
   cursor: pointer;
   background-color: lightgray;
+}
+
+.navLink:active {
+  background-color: white;
 }
 
 #navWrapper {
