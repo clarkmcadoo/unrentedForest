@@ -5,6 +5,8 @@ import { playingNowMovies } from "../../actions";
 import { bindActionCreators } from "redux";
 import Slider from "react-slick";
 
+// import {getDetails} from "../../actions";
+
 // need to get the field names from backend and also figure out the subheader variable name from store
 class Movie extends Component {
   componentWillMount() {
@@ -18,10 +20,37 @@ class Movie extends Component {
       swipeToSlide: true,
       swipe: true,
       arrows: true,
-      dots: true
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 1084,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 549,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 1
+          }
+        }
+      ]
     };
 
-    //maybe w150 also
     let imageStr = "https://image.tmdb.org/t/p/w300/";
     let movies = this.props.movies.map((details, index) => {
       return (
@@ -31,6 +60,8 @@ class Movie extends Component {
               className="poster"
               src={`${imageStr}${details.poster_path}`}
               alt={details.title}
+              id={details.id}
+              onClick={e => this.props.getDetails(e.target.id)}
             />
             <h3 className="movieTitle">
               {details.title}
@@ -41,7 +72,6 @@ class Movie extends Component {
                 details.release_date.substr(8, 2) +
                 "/" +
                 details.release_date.substr(0, 4)}
-              {/* {details.release_date.replace(/-/g, "/")} */}
             </h5>
           </div>
         </div>

@@ -4,6 +4,7 @@
 .movieContainer {
   display: flex;
   flex-direction: row;
+  font-size: 1em;
 }
 
 .movie_card {
@@ -24,6 +25,7 @@
 }
 
 .poster {
+  /* width: 16vw; */
   width: 200px;
   max-height: auto;
   display: flex;
@@ -44,5 +46,6 @@
 }
 
 .movieMasterContainer {
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
+  margin: 0px 50px 50px 50px;
 }
