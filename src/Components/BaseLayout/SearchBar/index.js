@@ -10,7 +10,8 @@ class SearchBar extends Component {
   }
 
   handleChange = e => {
-    this.state.currentString = e.target.value;
+    let currentString = e.target.value;
+    this.setState({currentString});
   };
 
   sendData = e => {
