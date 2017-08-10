@@ -4,7 +4,9 @@
 // const BASE_URL = "https://api.themoviedb.org/3/movie/?";
 
 const API_KEY = "&api_key=756d51b27574d082bdec5ff892e27bbe";
+
 let movie_id;
+
 
 //Direct API calls///
 // const URL = {
