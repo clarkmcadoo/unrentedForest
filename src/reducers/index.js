@@ -6,13 +6,15 @@ import {
   GET_ERROR,
   GET_TOP_RATED,
   GET_UPCOMING_MOVIES,
-  GET_POPULAR_MOVIES
+  GET_POPULAR_MOVIES,
+  GET_DETAILS
 } from "../actions";
 
 const initialState = {
   movies: [],
   subheader: "",
-  hasErrored: "No Errors ☺"
+  hasErrored: "No Errors ☺",
+  movieDetails: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -20,25 +22,29 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_MOVIE:
       newState.movies = action.payload;
-      console.log("GET_MOVIE action returned:", newState.movies);
       return newState;
     case GET_NOW_PLAYING:
       newState.movies = action.payload;
-      console.log("GET_NOW_PLAYING action returned:", newState.movies);
       newState.subheader = "NOW PLAYING";
       return newState;
     case GET_TOP_RATED:
       newState.movies = action.payload;
+      newState.subheader = "TOP RATED MOVIES";
       return newState;
     case GET_UPCOMING_MOVIES:
       newState.movies = action.payload;
+      newState.subheader = "UPCOMING MOVIES";
       return newState;
     case GET_POPULAR_MOVIES:
       newState.movies = action.payload;
+      newState.subheader = "POPULAR MOVIES";
       return newState;
     case GET_ERROR:
       newState.hasErrored = action.payload;
-      console.log("GET_ERRORS action return:", newState.errors);
+      newState.subheader = "AN ERROR HAS OCCURED";      
+      return newState;
+    case GET_DETAILS:
+      newState.movieDetails = action.payload;
       return newState;
     default:
       return state;
