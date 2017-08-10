@@ -1,13 +1,13 @@
 # Unrented Forest
 
-<img align="right" width="100" height="100" src="./theIronYard.png">
-### The Iron Yard Group Project - Nashville May - August 2017 Cohort
+### The Iron Yard Group Project, Nashville May - August 2017 Cohort
 
 ---
 
 View the finished project: http://unrentedforest.surge.sh/
 
 ---
+<img align="right" width="100" height="100" src="./theIronYard.png">
 
 #### Front End Web Development Team that contributed to this project:
 
