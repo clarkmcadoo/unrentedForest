@@ -1,7 +1,12 @@
 # Unrented Forest
 
-## The Iron Yard Group Project
+### The Iron Yard Group Project - Front End Web Developer Team
 
+---
+
+View the finished project: http://unrentedforest.surge.sh/
+
+---
 ## Application Requirements:
 
 * Build using Agile approach, ie; MVP
