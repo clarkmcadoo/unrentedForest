@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
+import './main.css';
 
-
-class SearchBar extends Component{
-  constructor(props){
+class SearchBar extends Component {
+  constructor(props) {
     super(props);
     this.state = {
       currentString: ""
@@ -11,20 +11,24 @@ class SearchBar extends Component{
 
   handleChange = e => {
     this.state.currentString = e.target.value;
-  }
+  };
 
   sendData = e => {
     this.props.handleSubmit(this.state.currentString);
-  }
-  
-  render(){
+  };
+
+  render() {
     return (
-      <div>
+      <div className="SearchBar">
         <form>
-          <input type="text" value = {this.change.currentString} onChange={this.handleChange}/>
-          <button type="submit" onClick={this.sendData}>Search</button>
-          </form>
+          <input id="searchBar" type="text" onChange={this.handleChange} autoFocus />
+          <button type="submit" onClick={this.sendData}>
+            Search
+          </button>
+        </form>
       </div>
     );
   }
 }
+
+export default SearchBar;

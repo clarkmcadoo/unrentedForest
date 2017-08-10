@@ -4,6 +4,7 @@
   border: 1px solid lightgray;
   color: gray;
   flex: 1;
+  padding: 4px 0;
 }
 
 .navLink:hover {
@@ -13,24 +14,38 @@
 
 #navWrapper {
   position: relative;
-  margin: 0;
+  margin: auto;
   padding: 0;
+  width: 10%;
 }
 
 #dropDownLinks {
-  position: ;
   display: none;
   width: 100%;
-  animation: menuload .5s;
+  animation: menuload .3s ease-out;
 }
+
+#navWrapper:hover {
+  width: 100%;
+  cursor: pointer;
+}
+
+#navWrapper:hover #arrowWrap {
+ top: 1.75rem;
+}
+
 
 #navWrapper:hover #dropDownLinks {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+  position: absolute;
 }
 
 #dropDownButton {
+  margin: auto;
+  margin-bottom: 60px;
+  width: 1px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -38,9 +53,9 @@
   position: relative;
 }
 
-#navArrow {
-  margin: 0;
-  padding: 0;
+#dropDownButton:active{
+    display: flex;
+    z-index: 1;
 }
 
 #arrowWrap {
@@ -48,7 +63,6 @@
   padding: 0;
   position: relative;
   border-top: 1px solid white;
-  z-index: 1;
 }
 
 #arrow {
@@ -60,23 +74,19 @@
   padding-bottom: 10px;
 }
 
-#arrow:hover {
-  cursor: pointer;
-}
-
 @keyframes menuload {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0;};
+  to { opacity: 1;};
 }
 
 @media (min-width: 1024px) {
   .navLink {
     padding: 10px;
   }
+
+  #navWrapper:hover #arrowWrap {
+ top: 2.5rem;
+}
 
   #arrow {
     width: 0;

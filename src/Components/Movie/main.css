@@ -1,0 +1,48 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.movieContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.movie_card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slick-prev:before {
+  color: red;
+  content: '\2190';
+}
+
+.slick-next:before {
+  color: red;
+  content: '\2192';
+}
+
+.poster {
+  width: 200px;
+  max-height: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 1px 1px 10px 1px grey;
+}
+
+.movieTitle {
+  padding: 10px 10px;
+  margin: 0px 10px;
+  font-style: italic;
+}
+
+.releaseDate {
+  padding: 0;
+  margin: 0;
+}
+
+.movieMasterContainer {
+  margin-bottom: 50px;
+}

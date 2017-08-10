@@ -1,6 +1,20 @@
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 body {
   max-width: 1024px;
   margin: auto;
+}
+
+#headerWrapper > div {
+  flex: 3;
 }
 
 #headerWrapper {
@@ -8,18 +22,17 @@ body {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  box-sizing: border-box;
 }
 
 #headerLogo {
-  display: inline-block;
   margin: 0;
-  margin-left: 5%;
-  padding: 15%;
+  padding: 25px;
   border-right: 1px solid white;
 }
 
-#searchBar {
-  display: inline-block;
-  margin-left: 10%;
-  
+@media (min-width: 1024px) {
+  #headerLogo {
+    padding: 20px;
+  }
 }
