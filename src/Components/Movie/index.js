@@ -26,12 +26,9 @@ class Movie extends Component {
           breakpoint: 1084,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
+            slidesToScroll: 3
           }
         },
-
         {
           breakpoint: 768,
           settings: {
@@ -67,9 +64,9 @@ class Movie extends Component {
               {details.title}
             </h3>
             <h5 className="releaseDate">
-              {details.release_date.substr(5, 2) +
+              {parseInt(details.release_date.substr(5, 2), 10) +
                 "/" +
-                details.release_date.substr(8, 2) +
+                parseInt(details.release_date.substr(8, 2), 10) +
                 "/" +
                 details.release_date.substr(0, 4)}
             </h5>
