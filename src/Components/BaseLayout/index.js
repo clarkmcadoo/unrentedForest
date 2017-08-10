@@ -12,7 +12,7 @@ const BaseLayout = props => {
       <div id="headerWrapper">
         <h1 id="headerLogo">U.F.</h1>
 
-        <SearchBar handleSubmit={props.handleSubmit} />
+        <SearchBar id="searchBar" handleSubmit={props.handleSubmit} />
       </div>
       <NavBar />
       {props.children}
