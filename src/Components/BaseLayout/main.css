@@ -1,3 +1,13 @@
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 body {
   max-width: 1024px;
   margin: auto;
@@ -11,15 +21,17 @@ body {
 }
 
 #headerLogo {
-  display: inline-block;
   margin: 0;
-  margin-left: 5%;
-  padding: 15%;
+  padding: 10px;
   border-right: 1px solid white;
 }
 
 #searchBar {
-  display: inline-block;
   margin-left: 10%;
-  
+}
+
+@media (min-width: 1024px){
+  #headerLogo {
+    padding: 30px;
+  }
 }

@@ -4,6 +4,7 @@
   border: 1px solid lightgray;
   color: gray;
   flex: 1;
+  padding: 4px 0;
 }
 
 .navLink:hover {
@@ -18,7 +19,6 @@
 }
 
 #dropDownLinks {
-  position: ;
   display: none;
   width: 100%;
   animation: menuload .5s;
