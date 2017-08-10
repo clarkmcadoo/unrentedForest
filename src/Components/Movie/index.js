@@ -3,10 +3,7 @@ import "./main.css";
 import { connect } from "react-redux";
 import { playingNowMovies } from "../../actions";
 import { bindActionCreators } from "redux";
-
-// imports for react-slick styling
 import Slider from "react-slick";
-// var slider = require("react-slick");
 
 // need to get the field names from backend and also figure out the subheader variable name from store
 class Movie extends Component {
@@ -16,18 +13,16 @@ class Movie extends Component {
   render() {
     const settings = {
       speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
+      slidesToShow: 4,
+      slidesToScroll: 4,
       swipeToSlide: true,
       swipe: true,
       arrows: true,
-      dots: true,
-      focusOnSelect: true
+      dots: true
     };
 
     //maybe w150 also
     let imageStr = "https://image.tmdb.org/t/p/w300/";
-    console.log("LINE 28", this.props.movies);
     let movies = this.props.movies.map((details, index) => {
       return (
         <div data-index={index} key={index}>
@@ -37,10 +32,10 @@ class Movie extends Component {
               src={`${imageStr}${details.poster_path}`}
               alt={details.title}
             />
-            <h3>
+            <h3 className="movieTitle">
               {details.title}
             </h3>
-            <h5>
+            <h5 className="releaseDate">
               {details.release_date}
             </h5>
           </div>
@@ -48,15 +43,22 @@ class Movie extends Component {
       );
     });
     return (
-      <div>
-        <h1>MOVIES</h1>
+      <div className="movieMasterContainer">
         <h2 className="subheader">
           {this.props.subheader}
         </h2>
-        {movies.length &&
-          <Slider {...settings}>
-            {movies}
-          </Slider>}
+        <div>
+          <button
+            type="button"
+            data-role="none"
+            className="slick-prev slick-arrow"
+            style={{ backgroundColor: "black" }}
+          />
+          {movies.length &&
+            <Slider {...settings}>
+              {movies}
+            </Slider>}
+        </div>
       </div>
     );
   }
