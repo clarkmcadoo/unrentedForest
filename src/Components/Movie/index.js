@@ -36,7 +36,12 @@ class Movie extends Component {
               {details.title}
             </h3>
             <h5 className="releaseDate">
-              {details.release_date}
+              {details.release_date.substr(5, 2) +
+                "/" +
+                details.release_date.substr(8, 2) +
+                "/" +
+                details.release_date.substr(0, 4)}
+              {/* {details.release_date.replace(/-/g, "/")} */}
             </h5>
           </div>
         </div>
