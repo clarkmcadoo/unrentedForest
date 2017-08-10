@@ -13,25 +13,26 @@ body {
   margin: auto;
 }
 
+#headerWrapper > div {
+  flex: 3;
+}
+
 #headerWrapper {
   background-color: red;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  box-sizing: border-box;
 }
 
 #headerLogo {
   margin: 0;
-  padding: 10px;
+  padding: 25px;
   border-right: 1px solid white;
 }
 
-#searchBar {
-  margin-left: 10%;
-}
-
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
   #headerLogo {
-    padding: 30px;
+    padding: 20px;
   }
 }

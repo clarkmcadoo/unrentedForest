@@ -1,10 +1,8 @@
-
-import React, { Component } from 'react';
-import '../App.css';
-import BaseLayout from './BaseLayout';
-import Details from './Details';
-import Movie from './Movie';
-
+import React, { Component } from "react";
+import "../App.css";
+import BaseLayout from "./BaseLayout";
+import Details from "./Details";
+import Movie from "./Movie";
 
 class App extends Component {
   render() {
