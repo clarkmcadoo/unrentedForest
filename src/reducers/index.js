@@ -6,13 +6,15 @@ import {
   GET_ERROR,
   GET_TOP_RATED,
   GET_UPCOMING_MOVIES,
-  GET_POPULAR_MOVIES
+  GET_POPULAR_MOVIES,
+  GET_DETAILS
 } from "../actions";
 
 const initialState = {
   movies: [],
   subheader: "",
-  hasErrored: "No Errors ☺"
+  hasErrored: "No Errors ☺",
+  movieDetails: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -27,7 +29,7 @@ const reducer = (state = initialState, action) => {
       return newState;
     case GET_TOP_RATED:
       newState.movies = action.payload;
-      newState.subheader = "TOP RATED";
+      newState.subheader = "TOP RATED MOVIES";
       return newState;
     case GET_UPCOMING_MOVIES:
       newState.movies = action.payload;
@@ -40,6 +42,9 @@ const reducer = (state = initialState, action) => {
     case GET_ERROR:
       newState.hasErrored = action.payload;
       newState.subheader = "AN ERROR HAS OCCURED";      
+      return newState;
+    case GET_DETAILS:
+      newState.movieDetails = action.payload;
       return newState;
     default:
       return state;
