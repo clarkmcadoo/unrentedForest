@@ -20,11 +20,14 @@ const BaseLayout = props => {
   );
 };
 
+function mapStateToProps(state, ownProps){
+  return {};
+}
+
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     handleSubmit: movieGetter
   });
-  dispatch;
 }
 
-export default connect(mapDispatchToProps)(BaseLayout);
+export default connect(mapStateToProps, mapDispatchToProps)(BaseLayout);
