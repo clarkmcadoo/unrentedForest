@@ -34,23 +34,28 @@
  top: 1.75rem;
 }
 
+
 #navWrapper:hover #dropDownLinks {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   position: absolute;
-  z-index: 1;
 }
 
 #dropDownButton {
   margin: auto;
   margin-bottom: 60px;
-  width: 10%;
+  width: 1px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+#dropDownButton:active{
+    display: flex;
+    z-index: 1;
 }
 
 #arrowWrap {
