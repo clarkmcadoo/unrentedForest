@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders correctly 1`] = `
+<div
+  id="baseLayoutWrapper"
+>
+  <div
+    id="headerWrapper"
+  >
+    <h1
+      id="headerLogo"
+    >
+      U.F.
+    </h1>
+    <div
+      className="SearchBar"
+    >
+      <form>
+        <input
+          autoFocus={true}
+          id="searchBar"
+          onChange={[Function]}
+          type="text"
+        />
+        <button
+          onClick={[Function]}
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+  </div>
+  <div
+    id="navWrapper"
+  >
+    <div
+      id="dropDownLinks"
+    >
+      <button
+        className="navLink"
+        onClick={[Function]}
+      >
+        Home
+      </button>
+      <button
+        className="navLink"
+        onClick={[Function]}
+      >
+        Upcoming
+      </button>
+      <button
+        className="navLink"
+        onClick={[Function]}
+      >
+        Popular
+      </button>
+      <button
+        className="navLink"
+        onClick={[Function]}
+      >
+        Top Rated
+      </button>
+    </div>
+    <div
+      id="dropDownButton"
+    >
+      <div
+        id="arrowWrap"
+      >
+        <div
+          id="arrow"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
