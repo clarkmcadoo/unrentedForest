@@ -10,7 +10,8 @@ class SearchBar extends Component {
   }
 
   handleChange = e => {
-    this.state.currentString = e.target.value;
+    let currentString = e.target.value;
+    this.setState({currentString});
   };
 
   sendData = e => {
@@ -22,7 +23,7 @@ class SearchBar extends Component {
       <div className="SearchBar">
         <form>
           <input id="searchBar" type="text" onChange={this.handleChange} autoFocus />
-          <button type="submit" onClick={this.sendData}>
+          <button type="submit" onClick={()=>this.sendData()}>
             Search
           </button>
         </form>
