@@ -23,7 +23,7 @@ class SearchBar extends Component {
       <div className="SearchBar">
         <form>
           <input id="searchBar" type="text" onChange={this.handleChange} autoFocus />
-          <button type="submit" onClick={this.sendData}>
+          <button type="submit" onClick={()=>this.sendData()}>
             Search
           </button>
         </form>
