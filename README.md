@@ -1,6 +1,6 @@
 # Unrented Forest
 
-### The Iron Yard Group Project, Nashville May - August 2017 Cohort
+### The Iron Yard Group Project, Nashville May - August 2017 Cohort 
 
 ---
 
@@ -28,6 +28,28 @@ View the finished project: http://unrentedforest.surge.sh/
 * [Justin Snyder](https://github.com/Kaizan08)
 
 * [Keegan Thompson](https://github.com/keeganthomp)
+
+---
+
+## Project Summary
+
+This is a group project between the front and back end development teams to build a movie site. It's a colloborative effort used build our skills with git/github, to practice branching, pull requests, and resolving merge conflicts.
+
+This repositiory is for the `front end` teams work.
+
+We used the following for the front end:
+
+* React
+
+* Redux
+
+* Redux-Thunk
+
+* Lodash
+
+* CSS
+
+The back end team developed a REST API in Java. Their repository is [IronMOVIES](https://github.com/rabell66/IronMovies).
 
 ---
 
@@ -82,5 +104,3 @@ View the finished project: http://unrentedforest.surge.sh/
     * Belongs to lists
     
     * Changes
-
-
