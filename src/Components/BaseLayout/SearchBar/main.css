@@ -1,0 +1,19 @@
+  .SearchBar {
+    display: block;
+    padding: 0 2%;
+  }
+
+  .SearchBar form {
+    display: flex;
+  }
+
+  .SearchBar input {
+    flex: 1;
+    height: 2rem;
+    border: none;
+  }
+
+  .SearchBar button {
+    border: none;
+  }
+  
