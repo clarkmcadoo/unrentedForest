@@ -76,11 +76,9 @@ export const movieGetter = movieTitle => {
       `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`
     )
       .then(response => {
-        console.log(`response for fetching ${query}:`, response);
         return response.json();
       })
       .then(foundMovie => {
-        console.log(`Movie(s) found for ${query}:`, foundMovie);
         dispatch(getMovie(foundMovie.results));
       })
       .catch(err => dispatch(getErrors(err)));
@@ -88,15 +86,12 @@ export const movieGetter = movieTitle => {
 };
 
 export const playingNowMovies = moviesNowPlaying => {
-  console.log('moviesNowPlaying: ', moviesNowPlaying);
   return dispatch => {
     fetch(URL.nowPlaying)
       .then(response => {
-        console.log("response for getting movies Now Playing:", response);
         return response.json();
       })
       .then(nowPlayingMovies => {
-        console.log("Movies Currently Playing:", nowPlayingMovies.results);
         dispatch(getNowPlaying(nowPlayingMovies.results));
       })
       .catch(err => dispatch(getErrors(err)));
@@ -104,11 +99,9 @@ export const playingNowMovies = moviesNowPlaying => {
 };
 
 export const upcomingMovies = upcoming => {
-  console.log('upcoming: ', upcoming);
   return dispatch => {
     fetch(URL.upcoming)
       .then(response => {
-        console.log('response: ', response);
         return response.json();
       })
       .then(moviesComingSoon => {
@@ -119,11 +112,9 @@ export const upcomingMovies = upcoming => {
 };
 
 export const topRatedMovies = topRatedMovies => {
-  console.log('topRatedMovies: ', topRatedMovies);
   return dispatch => {
     fetch(URL.topRated)
       .then(response => {
-        console.log('response: ', response);
         return response.json();
       })
       .then(topRated => {
@@ -140,7 +131,6 @@ export const popularMovies = popular => {
         return response.json();
       })
       .then(popularMovies => {
-        console.log('popularMovies: ', popularMovies);
         dispatch(getPopularMovies(popularMovies.results));
       })
       .catch(err => dispatch(getErrors(err)));
