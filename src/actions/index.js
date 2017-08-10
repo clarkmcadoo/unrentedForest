@@ -3,18 +3,29 @@
 //example request: https://api.themoviedb.org/3/movie/550?api_key=756d51b27574d082bdec5ff892e27bbe
 // const BASE_URL = "https://api.themoviedb.org/3/movie/?";
 
+// const API_KEY = "&api_key=756d51b27574d082bdec5ff892e27bbe";
 
-const API_KEY = "&api_key=756d51b27574d082bdec5ff892e27bbe";
-const moviesNowPlayingUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`;
-const topRatedMovieUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`;
-const upcomingMovieUrl = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`;
-const popularMoviesUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+//Direct API calls///
+// const URL = {
+//   nowPlaying: `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`,
+//   topRated: `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`,
+//   upcoming: `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`,
+//   popular: `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+// };
+
+const URL = {
+  nowPlaying: `https://ironmovies.herokuapp.com/api/movies?apikey=abc`,
+  topRated: `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`,
+  upcoming: `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`,
+  popular: `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+};
 
 export const GET_MOVIE = "GET_MOVIE";
 export const GET_NOW_PLAYING = "GET_NOW_PLAYING";
 export const GET_TOP_RATED = "GET_TOP_RATED";
 export const GET_UPCOMING_MOVIES = "GET_UPCOMING_MOVIES";
 export const GET_POPULAR_MOVIES = "GET_POPULAR_MOVIES";
+export const GET_ERROR = "GET_ERROR";
 
 const getMovie = movieQuery => {
   return {
@@ -51,9 +62,15 @@ const getPopularMovies = popularMovies => {
   };
 };
 
+const getErrors = errors => {
+  return {
+    type: GET_ERROR,
+    payload: errors
+  };
+};
+
 export const movieGetter = movieTitle => {
   let query = movieTitle.replace(/" "/g, "+");
-  //Need to make spaces become '+' for movieTitle query
   return dispatch => {
     fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`
@@ -66,14 +83,14 @@ export const movieGetter = movieTitle => {
         console.log(`Movie(s) found for ${query}:`, foundMovie);
         dispatch(getMovie(foundMovie));
       })
-      .catch(() => console.log("ERROR with `movieGetter` action!!!"));
+      .catch(err => dispatch(getErrors(err)));
   };
 };
 
 export const playingNowMovies = moviesNowPlaying => {
-    console.log()
+  console.log();
   return dispatch => {
-    fetch(moviesNowPlayingUrl)
+    fetch(URL.nowPlaying)
       .then(response => {
         console.log("response for getting movies Now Playing:", response);
         return response.json();
@@ -82,51 +99,45 @@ export const playingNowMovies = moviesNowPlaying => {
         console.log("Movies Currently Playing:", nowPlayingMovies.results);
         dispatch(getNowPlaying(nowPlayingMovies.results));
       })
-      .catch(() => console.log("ERROR with `playingNow` action!!!"));
+      .catch(err => dispatch(getErrors(err)));
   };
 };
 
 export const upcomingMovies = upcoming => {
   return dispatch => {
-    fetch(upcomingMovieUrl)
+    fetch(URL.upcoming)
       .then(response => {
         return response.json();
       })
       .then(moviesComingSoon => {
         dispatch(getUpcomingMovies(moviesComingSoon));
       })
-      .catch(err => {
-        console.log(err);
-      });
+      .catch(err => dispatch(getErrors(err)));
   };
 };
 
 export const topRatedMovies = topRatedMovies => {
   return dispatch => {
-    fetch(topRatedMovieUrl)
+    fetch(URL.topRated)
       .then(response => {
         return response.json();
       })
       .then(topRated => {
         dispatch(getTopRated(topRated));
       })
-      .catch(err => {
-        console.log(err);
-      });
+      .catch(err => dispatch(getErrors(err)));
   };
 };
 
 export const popularMovies = popular => {
   return dispatch => {
-    fetch(popularMoviesUrl)
+    fetch(URL.popular)
       .then(response => {
         return response.json();
       })
       .then(popularMovies => {
         dispatch(getPopularMovies(popularMovies));
       })
-      .catch(err => {
-        console.log(err);
-      });
+      .catch(err => dispatch(getErrors(err)));
   };
 };
