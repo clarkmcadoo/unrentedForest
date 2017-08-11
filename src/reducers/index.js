@@ -45,6 +45,7 @@ const reducer = (state = initialState, action) => {
       return newState;
     case GET_DETAILS:
       newState.movieDetails = action.payload;
+      console.log(newState);
       return newState;
     default:
       return state;
