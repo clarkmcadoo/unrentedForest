@@ -151,8 +151,9 @@ export const popularMovies = popular => {
 };
 
 export const getDetails = movieId => {
+  console.log('getDetails ', movieId);
   return dispatch => {
-    fetch(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}&language=en-US`)
+    fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`)
       .then(response => {
         return response.json();
       })

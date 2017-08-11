@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./main.css";
 import { connect } from "react-redux";
-import { playingNowMovies } from "../../actions";
+import { playingNowMovies, getDetails } from "../../actions";
 import { bindActionCreators } from "redux";
 import Slider from "react-slick";
 
@@ -97,7 +97,6 @@ class Movie extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("state: ", state);
   return {
     subheader: state.titles.subheader,
     movies: state.titles.movies
@@ -105,7 +104,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ playingNowMovies: playingNowMovies }, dispatch);
+  return bindActionCreators({ playingNowMovies: playingNowMovies, getDetails: getDetails }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Movie);
